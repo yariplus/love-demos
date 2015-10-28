@@ -8,6 +8,8 @@ set SendKeys=CScript //nologo //E:JScript "%~F0"
 start "" /B lovedist.exe love-controller love-controller -e
 start "" /B lovedist.exe love-dodger love-dodger -e
 start "" /B lovedist.exe love-hello love-hello -e
+start "" /B lovedist.exe love-tictactoe love-tictactoe -e
+%SendKeys% "{ENTER}"
 %SendKeys% "{ENTER}"
 %SendKeys% "{ENTER}"
 %SendKeys% "{ENTER}"
