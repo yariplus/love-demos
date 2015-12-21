@@ -1,6 +1,6 @@
-local enemy = {super = g.Entity}
+local enemy = {}
 
-setmetatable(enemy, {__index = enemy.super})
+setmetatable(enemy, {__index = g.Entity})
 
 function enemy:update(dt)
 	self.y = self.y + dt * self.speed -- Move down
@@ -17,7 +17,7 @@ function enemy:update(dt)
 end
 
 function enemy:init()
-	self.super.init(self)
+	g.Entity.init(self)
 
 	self.speed = 120
 
@@ -28,7 +28,7 @@ end
 function enemy:draw()
 	love.graphics.setColor(255, 0, 0)
 
-	self.super.draw(self)
+	g.Entity.draw(self)
 end
 
 function enemy:new(o)

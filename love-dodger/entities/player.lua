@@ -1,6 +1,6 @@
-local player = {super = g.Entity}
+local player = {}
 
-setmetatable(player, {__index = player.super})
+setmetatable(player, {__index = g.Entity})
 
 function player:update(dt)
 	if love.keyboard.isDown('up') then self.y = self.y - self.speed*dt end
@@ -10,7 +10,7 @@ function player:update(dt)
 end
 
 function player:init()
-	self.super.init(self)
+	g.Entity.init(self)
 
 	self.speed = 80
 
@@ -20,7 +20,8 @@ end
 
 function player:draw()
 	love.graphics.setColor(0, 255, 0)
-	self.super.draw(self)
+
+	g.Entity.draw(self)
 end
 
 function player:new(o)
