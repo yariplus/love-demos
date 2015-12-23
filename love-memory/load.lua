@@ -55,5 +55,5 @@ function love.load()
 	end
 
 	love.graphics.setBackgroundColor(50, 30, 10)
-	g.stateMenu:load()
+	game.changeState(g.stateMenu)
 end

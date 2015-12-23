@@ -13,7 +13,7 @@ function Clickable:new(o)
 	return o
 end
 
--- A collection of clickable areas.
+-- A collection of clickable areas for an entity.
 local Clickables = {}
 
 function Clickables:click(x, y, button)

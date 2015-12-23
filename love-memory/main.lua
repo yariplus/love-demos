@@ -11,7 +11,7 @@ require "load"
 
 function love.update(dt)
 	game.tick = game.tick + 1
-	g.state:update(dt)
+	game.state:update(dt)
 	if game.matching then
 		if game.matching + 40 < game.tick then
 			game.match()
@@ -20,7 +20,7 @@ function love.update(dt)
 end
 
 function love.draw()
-	love.graphics.clear() g.state:draw()
+	love.graphics.clear() game.state:draw()
 	love.graphics.setColor(255, 255, 255)
 	love.graphics.draw(assets.SpriteBatches.cards)
 	getmetatable(Card).__index.setY(Card, 10)
