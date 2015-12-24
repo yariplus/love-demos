@@ -10,6 +10,8 @@ start "" /B lovedist.exe love-dodger love-dodger -e
 start "" /B lovedist.exe love-hello love-hello -e
 start "" /B lovedist.exe love-tictactoe love-tictactoe -e
 start "" /B lovedist.exe love-memory love-memory -e
+start "" /B lovedist.exe love-slider love-slider -e
+%SendKeys% "{ENTER}"
 %SendKeys% "{ENTER}"
 %SendKeys% "{ENTER}"
 %SendKeys% "{ENTER}"
